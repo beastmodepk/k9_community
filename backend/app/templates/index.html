@@ -1,14 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Help App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <h1>Welcome to Kimball Court K9 Community!</h1>
-    <p>Your trusted platform for dog services in our apartment complex!</p>
-    <p>FOR the residents BY the residents</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Welcome to K9 Community{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <h1>Welcome to K9 Community</h1>
+    <p>Your Apartment's Trusted Dog Care Platform</p>
+    <div class="btn-container">
+        <a href="{{ url_for('auth.register') }}" class="btn btn-primary">Sign Up to Get Started</a>
+        <a href="{{ url_for('auth.login') }}" class="btn btn-secondary">Log In</a>
+    </div>
+</div>
+
+<div class="features-section">
+    <h2>Why Join K9 Community?</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>For Dog Owners</h3>
+            <p>Add your dog, book trusted services, and connect with neighbors.</p>
+        </div>
+        <div class="feature">
+            <h3>For Service Providers</h3>
+            <p>Offer walking, feeding, and boarding services to local dog owners.</p>
+        </div>
+    </div>
+</div>
+
+<div class="stats-section">
+    <h2>Our Community in Numbers</h2>
+    <div class="stats">
+        <div class="stat">
+            <h3>{{ total_dogs }}</h3>
+            <p>Happy Dogs Listed</p>
+        </div>
+        <div class="stat">
+            <h3>{{ total_providers }}</h3>
+            <p>Trusted Service Providers</p>
+        </div>
+        <div class="stat">
+            <h3>{{ total_reviews }}</h3>
+            <p>5-Star Reviews</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

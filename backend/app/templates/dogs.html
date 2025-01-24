@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Dog Listings{% endblock %}
+
+{% block content %}
+    <h1>Dog Listings</h1>
+    <ul>
+        {% for dog in dogs %}
+            <li>
+                <strong>{{ dog.name }}</strong> ({{ dog.breed }}) - Age: {{ dog.age }}<br>
+                Temperament: Kids: {{ dog.temperament_with_kids }}, Dogs: {{ dog.temperament_with_dogs }}, Pets: {{ dog.temperament_with_pets }}<br>
+                Weight: {{ dog.weight }} kg<br>
+                Owner: {{ dog.owner.name }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('dogs.add_dog') }}">Add a Dog</a>
+{% endblock %}

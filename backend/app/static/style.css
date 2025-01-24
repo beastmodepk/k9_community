@@ -1,11 +1,222 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    text-align: center;
-    padding: 20px;
+/* General Reset */
+body, h1, h2, h3, p, ul, li, form, input, button, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    background: #5a67d8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.content .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-primary {
+    background: #3182ce;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+}
+
+.btn-secondary {
+    background: #2d3748;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #1a202c;
+}
+
+/* Features Section */
+.features-section {
+    padding: 40px 20px;
+    background: #f3f4f6;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    text-align: center;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat {
+    flex: 1;
+    max-width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 36px;
     color: #5a67d8;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 16px;
+    color: #666;
+}
+
+.footer {
+    text-align: center;
+    background: #5a67d8;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    position: relative;
+    margin-top: 20px;
+}
+
+
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+form label {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    background: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #2563eb;
+}
+
+form p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+form p a {
+    color: #3182ce;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
 }
